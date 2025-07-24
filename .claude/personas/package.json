@@ -1,9 +1,0 @@
-{
-  "name": "claude-buddy-personas",
-  "version": "1.0.0",
-  "private": true,
-  "main": "index.js",
-  "dependencies": {
-    "fs-extra": "^11.1.0"
-  }
-}
