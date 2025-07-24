@@ -1,0 +1,98 @@
+{
+  "compilerOptions": {
+    // Target and Module Settings
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["ES2022"],
+    
+    // Output Settings
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    
+    // Module Resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Strict Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    
+    // Additional Checks
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    
+    // Advanced
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    
+    // Emit
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "importHelpers": false,
+    "downlevelIteration": false,
+    
+    // Experimental
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    
+    // Path Mapping (matches Jest configuration)
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/personas/*": ["src/personas/*"],
+      "@/config/*": ["src/config/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@test/*": ["tests/utils/*"]
+    }
+  },
+  
+  "include": [
+    "src/**/*"
+  ],
+  
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests",
+    "**/*.js",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    ".tsbuildinfo"
+  ],
+  
+  "compileOnSave": false,
+  
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "dist"]
+  },
+  
+  "typeAcquisition": {
+    "enable": true,
+    "include": ["node"],
+    "exclude": []
+  }
+}

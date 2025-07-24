@@ -1,0 +1,92 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on any version tag starting with 'v'
+  workflow_dispatch:  # Allow manual triggering
+    inputs:
+      tag:
+        description: 'Tag to publish (optional, uses latest tag if not specified)'
+        required: false
+        type: string
+
+permissions:
+  contents: write  # Required for creating releases
+  packages: write  # Required for npm publishing
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run type checking
+        run: npm run type-check
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build:dist
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Setup NPM Authentication
+        run: npm run setup-auth
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to NPM
+        run: npm publish
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ steps.version.outputs.VERSION }}
+          body: |
+            ## Changes in ${{ steps.version.outputs.VERSION }}
+            
+            ### Installation
+            ```bash
+            npm install -g claude-code-buddy@${{ steps.version.outputs.VERSION }}
+            ```
+            
+            ### Quick Start
+            ```bash
+            claude-code-buddy --global
+            ```
+            
+            See the [README](https://github.com/gsetsero/claude-code-buddy#readme) for full documentation.
+          draft: false
+          prerelease: ${{ contains(steps.version.outputs.VERSION, '-') }}

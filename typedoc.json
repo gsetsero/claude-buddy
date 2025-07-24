@@ -1,0 +1,83 @@
+{
+  "entryPoints": [
+    "./src/personas/index.ts",
+    "./src/types/index.ts"
+  ],
+  "out": "./docs/api",
+  "theme": "default",
+  "includeVersion": true,
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "categorizeByGroup": true,
+  "defaultCategory": "Other",
+  "categoryOrder": [
+    "Core",
+    "Persona Management", 
+    "Auto-Activation",
+    "Learning Engine",
+    "Types",
+    "Configuration",
+    "Context",
+    "Other"
+  ],
+  "sort": ["source-order"],
+  "kindSortOrder": [
+    "Project",
+    "Module",
+    "Namespace",
+    "Enum",
+    "EnumMember",
+    "Class",
+    "Interface",
+    "TypeAlias",
+    "Constructor",
+    "Property",
+    "Variable",
+    "Function",
+    "Method",
+    "Accessor",
+    "Parameter"
+  ],
+  "visibilityFilters": {
+    "protected": true,
+    "private": false,
+    "inherited": true,
+    "external": false
+  },
+  "searchInComments": true,
+  "searchInDocuments": true,
+  "cleanOutputDir": true,
+  "titleLink": "https://github.com/claude-buddy/claude-buddy",
+  "navigationLinks": {
+    "GitHub": "https://github.com/claude-buddy/claude-buddy",
+    "Documentation": "https://docs.claude-buddy.dev"
+  },
+  "sidebarLinks": {
+    "Installation Guide": "https://github.com/claude-buddy/claude-buddy#installation",
+    "Troubleshooting": "../troubleshooting.html"
+  },
+  "readme": "./README.md",
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/tests/**",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "externalPattern": [
+    "**/node_modules/**"
+  ],
+  "excludeTags": [
+    "@internal",
+    "@alpha",
+    "@beta"
+  ],
+  "logLevel": "Info",
+  "plugin": ["typedoc-plugin-markdown"],
+  "validation": {
+    "notExported": false,
+    "invalidLink": true,
+    "notDocumented": false
+  }
+}
