@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Code Buddy - Auto-Formatter Hook
+Claude Buddy - Auto-Formatter Hook
 
 This PostToolUse hook automatically formats code files after they are written or modified.
 Supports multiple languages and tools for consistent code formatting.
@@ -96,7 +96,7 @@ FORMATTERS = {
 }
 
 def load_config() -> Dict[str, Any]:
-    """Load Claude Code Buddy configuration for auto-formatting settings."""
+    """Load Claude Buddy configuration for auto-formatting settings."""
     config_paths = [
         ".claude-buddy/config.json",
         os.path.expanduser("~/.claude-buddy/config.json"),

@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/file-guard.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/file-guard.py",
             "description": "Protect sensitive files from being written",
             "enabled": true,
             "timeout": 10
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/file-guard.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/file-guard.py",
             "description": "Protect sensitive files from being edited",
             "enabled": true,
             "timeout": 10
@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/file-guard.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/file-guard.py",
             "description": "Protect sensitive files from being modified",
             "enabled": true,
             "timeout": 10
@@ -42,7 +42,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/command-validator.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/command-validator.py",
             "description": "Validate and block dangerous bash commands",
             "enabled": true,
             "timeout": 10
@@ -56,7 +56,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/auto-formatter.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/auto-formatter.py",
             "description": "Auto-format code files after writing",
             "enabled": true,
             "timeout": 30
@@ -68,7 +68,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/auto-formatter.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/auto-formatter.py",
             "description": "Auto-format code files after editing",
             "enabled": true,
             "timeout": 30
@@ -80,7 +80,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/auto-formatter.py",
+            "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/auto-formatter.py",
             "description": "Auto-format code files after multi-editing",
             "enabled": true,
             "timeout": 30
@@ -91,7 +91,7 @@
     "UserPromptSubmit": [
       {
         "type": "command",
-        "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/assitant-integration/claude-code-buddy/.claude/hooks/persona-integration.py",
+        "command": "uv run --no-project python /Users/ogarcia/Workspaces/ws-ai/claude-buddy/.claude/hooks/persona-integration.py",
         "description": "Enhance buddy commands with persona context",
         "enabled": true,
         "timeout": 15

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Code Buddy - Command Validation Hook
+Claude Buddy - Command Validation Hook
 
 This PreToolUse hook validates and blocks dangerous bash commands before execution.
 It helps prevent accidental system damage and promotes safer development practices.
@@ -62,7 +62,7 @@ BEST_PRACTICE_SUGGESTIONS = [
 ]
 
 def load_config() -> Dict[str, Any]:
-    """Load Claude Code Buddy configuration for custom command rules."""
+    """Load Claude Buddy configuration for custom command rules."""
     config_paths = [
         ".claude-buddy/config.json",
         os.path.expanduser("~/.claude-buddy/config.json"),
@@ -167,7 +167,7 @@ def create_block_response(command: str, reason: str, alternative: str) -> Dict[s
 
 ⚠️ Risk: {reason}
 
-🛡️ Claude Code Buddy blocked this command to protect your system from potential damage.
+🛡️ Claude Buddy blocked this command to protect your system from potential damage.
 
 💡 Safer approach: {alternative}
 

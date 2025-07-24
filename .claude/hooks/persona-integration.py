@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Code Buddy - Persona Integration Hook
+Claude Buddy - Persona Integration Hook
 
 This UserPromptSubmit hook detects buddy commands and enhances them with
 persona-specific context and guidance from the persona system.
@@ -15,7 +15,7 @@ from typing import Dict, List, Any, Optional, Tuple
 
 
 def load_config() -> Dict[str, Any]:
-    """Load Claude Code Buddy configuration."""
+    """Load Claude Buddy configuration."""
     config_paths = [
         ".claude-buddy/config.json",
         os.path.expanduser("~/.claude-buddy/config.json"),
@@ -44,7 +44,7 @@ def load_personas() -> List[Dict[str, Any]]:
     """Load persona definitions from JSON files."""
     personas = []
     persona_dirs = [
-        "claude-code-buddy/src/personas",
+        "claude-buddy/src/personas",
         ".claude/personas",
         os.path.expanduser("~/.claude/personas")
     ]

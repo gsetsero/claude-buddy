@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Code Buddy - File Protection Hook
+Claude Buddy - File Protection Hook
 
 This PreToolUse hook protects sensitive files from being written to or modified.
 It blocks operations on files that contain secrets, credentials, or other sensitive data.
@@ -58,7 +58,7 @@ CRITICAL_PATHS = [
 ]
 
 def load_config() -> Dict[str, Any]:
-    """Load Claude Code Buddy configuration for custom protection rules."""
+    """Load Claude Buddy configuration for custom protection rules."""
     config_paths = [
         ".claude-buddy/config.json",
         os.path.expanduser("~/.claude-buddy/config.json"),
@@ -132,7 +132,7 @@ def get_file_context(file_path: str) -> str:
     elif ".sqlite" in file_path_lower or file_path_lower.endswith(".db"):
         return "Database files may contain sensitive user data and should be handled carefully."
     else:
-        return "This file matches patterns for sensitive data and is protected by Claude Code Buddy."
+        return "This file matches patterns for sensitive data and is protected by Claude Buddy."
 
 def create_block_response(file_path: str, reason: str) -> Dict[str, Any]:
     """Create a JSON response to block the tool execution."""
@@ -222,7 +222,7 @@ def main():
 
 {file_context}
 
-Claude Code Buddy protects sensitive files to prevent accidental exposure of:
+Claude Buddy protects sensitive files to prevent accidental exposure of:
 • API keys and secrets
 • Database credentials  
 • SSH private keys

@@ -1,5 +1,5 @@
 {
-  "name": "claude-code-buddy-personas",
+  "name": "claude-buddy-personas",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",

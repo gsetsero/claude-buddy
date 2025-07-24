@@ -1,4 +1,4 @@
-# Claude Code Buddy
+# Claude Buddy
 
 🔮 **Your intelligent AI development companion with domain expertise**
 
@@ -44,7 +44,7 @@
 ## Configuration
 
 Configuration files:
-- `buddy-config.json` - Main Claude Code Buddy settings including persona preferences
+- `buddy-config.json` - Main Claude Buddy settings including persona preferences
 - `hooks.json` - Hook configuration for Claude Code
 - `personas/config/personas-config.json` - Persona system configuration
 
@@ -81,11 +81,11 @@ Activity logs are stored in:
 
 ## Support
 
-For issues or questions, visit: https://github.com/claude-code-buddy/claude-code-buddy
+For issues or questions, visit: https://github.com/claude-buddy/claude-buddy
 
 ---
 
-Installed on: 2025-07-22T23:27:59.677Z
+Installed on: 2025-07-24T13:11:04.435Z
 Mode: project
 Version: 1.0.0
 Persona System: Enabled with 11 domain experts
