@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Buddy Logo Options</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FDFDF7;
+            color: #0E0E0E;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .logo-option {
+            background: white;
+            border: 1px solid #E5E5E0;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .logo-option:hover {
+            border-color: #D4A27F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 162, 127, 0.15);
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 15px;
+            display: block;
+        }
+        
+        .logo-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #D4A27F;
+        }
+        
+        .logo-description {
+            font-size: 14px;
+            color: #4A4A48;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0E0E0E;
+        }
+        
+        .selected {
+            background: #D4A27F;
+            color: white;
+        }
+        
+        .selected .logo-name,
+        .selected .logo-description {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Claude Buddy Logo Options</h1>
+    
+    <div class="logo-grid">
+        <!-- Option 1: Lightning Bolt (Enhancement/Speed) -->
+        <div class="logo-option">
+            <span class="logo">⚡</span>
+            <div class="logo-name">Lightning Bolt</div>
+            <div class="logo-description">Represents speed, enhancement, and power boost</div>
+        </div>
+        
+        <!-- Option 2: Rocket (Supercharge) -->
+        <div class="logo-option">
+            <span class="logo">🚀</span>
+            <div class="logo-name">Rocket</div>
+            <div class="logo-description">Conveys acceleration and taking Claude Code to the next level</div>
+        </div>
+        
+        <!-- Option 3: Plus in Circle (Addition/Enhancement) -->
+        <div class="logo-option">
+            <span class="logo">⊕</span>
+            <div class="logo-name">Plus Circle</div>
+            <div class="logo-description">Mathematical symbol for addition, clean and professional</div>
+        </div>
+        
+        <!-- Option 4: Gear (Integration) -->
+        <div class="logo-option">
+            <span class="logo">⚙️</span>
+            <div class="logo-name">Gear</div>
+            <div class="logo-description">Technical integration and enhancement</div>
+        </div>
+        
+        <!-- Option 5: Sparkles (Enhancement) -->
+        <div class="logo-option">
+            <span class="logo">✨</span>
+            <div class="logo-name">Sparkles</div>
+            <div class="logo-description">Magical enhancement, transformation</div>
+        </div>
+        
+        <!-- Option 6: Custom SVG - Hexagon with Plus -->
+        <div class="logo-option">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" 
+                         fill="none" 
+                         stroke="#D4A27F" 
+                         stroke-width="3"/>
+                <path d="M50,30 L50,70 M30,50 L70,50" 
+                      stroke="#D4A27F" 
+                      stroke-width="6" 
+                      stroke-linecap="round"/>
+            </svg>
+            <div class="logo-name">Hexagon Plus</div>
+            <div class="logo-description">Technical, modular enhancement symbol</div>
+        </div>
+        
+        <!-- Option 7: Custom SVG - Connected Nodes -->
+        <div class="logo-option">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="20" r="15" fill="#D4A27F"/>
+                <circle cx="20" cy="60" r="10" fill="#C89368"/>
+                <circle cx="80" cy="60" r="10" fill="#C89368"/>
+                <circle cx="50" cy="80" r="8" fill="#A67C52"/>
+                <line x1="50" y1="20" x2="20" y2="60" stroke="#D4A27F" stroke-width="2"/>
+                <line x1="50" y1="20" x2="80" y2="60" stroke="#D4A27F" stroke-width="2"/>
+                <line x1="20" y1="60" x2="50" y2="80" stroke="#C89368" stroke-width="2"/>
+                <line x1="80" y1="60" x2="50" y2="80" stroke="#C89368" stroke-width="2"/>
+            </svg>
+            <div class="logo-name">Network Nodes</div>
+            <div class="logo-description">Represents AI personas and connections</div>
+        </div>
+        
+        <!-- Option 8: Custom SVG - Layered Enhancement -->
+        <div class="logo-option">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="60" width="60" height="20" rx="4" fill="#E5E5E0"/>
+                <rect x="25" y="40" width="50" height="20" rx="4" fill="#D4A27F" opacity="0.7"/>
+                <rect x="30" y="20" width="40" height="20" rx="4" fill="#C89368"/>
+            </svg>
+            <div class="logo-name">Stack Layers</div>
+            <div class="logo-description">Building on top of Claude Code</div>
+        </div>
+        
+        <!-- Option 9: Arrow Up (Enhancement) -->
+        <div class="logo-option">
+            <span class="logo">⬆️</span>
+            <div class="logo-name">Level Up</div>
+            <div class="logo-description">Simple, clear enhancement metaphor</div>
+        </div>
+        
+        <!-- Option 10: Custom SVG - CB Monogram -->
+        <div class="logo-option">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="80" height="80" rx="12" fill="none" stroke="#D4A27F" stroke-width="3"/>
+                <text x="50" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#D4A27F">CB</text>
+            </svg>
+            <div class="logo-name">CB Monogram</div>
+            <div class="logo-description">Claude Buddy initials, professional</div>
+        </div>
+        
+        <!-- Option 11: Infinity Plus -->
+        <div class="logo-option">
+            <span class="logo">♾️</span>
+            <div class="logo-name">Infinity</div>
+            <div class="logo-description">Unlimited possibilities with Claude Buddy</div>
+        </div>
+        
+        <!-- Option 12: Custom SVG - Minimalist Plus -->
+        <div class="logo-option">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,20 L50,80 M20,50 L80,50" 
+                      stroke="#D4A27F" 
+                      stroke-width="8" 
+                      stroke-linecap="round"/>
+            </svg>
+            <div class="logo-name">Minimal Plus</div>
+            <div class="logo-description">Clean, simple enhancement symbol</div>
+        </div>
+    </div>
+    
+    <script>
+        // Allow clicking to select favorites
+        document.querySelectorAll('.logo-option').forEach(option => {
+            option.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>

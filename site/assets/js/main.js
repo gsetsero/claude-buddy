@@ -5,6 +5,7 @@
 
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
+    initializeTheme();
     initializeNavigation();
     initializeAnimations();
     initializeInteractions();
@@ -12,6 +13,47 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePersonaCards();
     initializeScrollEffects();
 });
+
+/**
+ * Initialize theme management
+ */
+function initializeTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    
+    // Theme toggle functionality
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Smooth transition
+            body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+        });
+    }
+    
+    // Check system preference
+    if (window.matchMedia && !localStorage.getItem('theme')) {
+        const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        if (darkModeQuery.matches) {
+            body.setAttribute('data-theme', 'dark');
+        }
+        
+        // Listen for system theme changes
+        darkModeQuery.addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                body.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+}
 
 /**
  * Initialize navigation functionality
@@ -74,7 +116,7 @@ function initializeAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+                entry.target.style.opacity = '1';
                 observer.unobserve(entry.target);
             }
         });
@@ -82,51 +124,36 @@ function initializeAnimations() {
 
     // Observe elements for animation
     const animatedElements = document.querySelectorAll(
-        '.feature-block, .persona-card, .install-option, .comparison__card'
+        '.feature-block, .persona-card, .install-option, .comparison__card, .integration-card, .flow-item'
     );
     
-    animatedElements.forEach(el => observer.observe(el));
+    animatedElements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
 
     // Animate terminal typing effect
     animateTerminal();
 }
 
 /**
- * Animate terminal typing effect
+ * Animate terminal typing effect - Simplified
  */
 function animateTerminal() {
     const terminalLines = document.querySelectorAll('.terminal__command');
     
-    terminalLines.forEach((line, index) => {
-        const text = line.textContent;
-        line.textContent = '';
+    terminalLines.forEach((line) => {
+        // Simple fade in instead of typing effect
+        line.style.opacity = '0';
+        line.style.transition = 'opacity 0.5s ease';
         
-        // Delay each line
         setTimeout(() => {
-            typeText(line, text, 50);
-        }, index * 2000);
+            line.style.opacity = '1';
+        }, 100);
     });
 }
 
-/**
- * Type text with animation
- */
-function typeText(element, text, speed = 50) {
-    let i = 0;
-    const timer = setInterval(() => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(timer);
-            // Add cursor blink effect
-            element.style.borderRight = '2px solid var(--color-accent-primary)';
-            setTimeout(() => {
-                element.style.borderRight = 'none';
-            }, 1000);
-        }
-    }, speed);
-}
+// Removed typeText function - no longer needed
 
 /**
  * Initialize interactive features
