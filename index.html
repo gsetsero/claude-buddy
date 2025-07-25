@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Buddy - Transform Claude Code into an AI Development Powerhouse</title>
-    <meta name="description" content="11 specialized AI experts, intelligent automation, and safety-first design for Claude Code. Transform your development workflow with domain-specific personas.">
+    <title>Claude Buddy - Enhanced Claude Code with Expert AI Personas</title>
+    <meta name="description" content="Enhance Claude Code with 11 specialized AI experts. Get domain-specific insights, automated workflows, and advanced safety features.">
     <meta name="keywords" content="Claude Code, AI development, coding assistant, personas, automation, TypeScript, JavaScript, Python">
     
     <!-- Open Graph / Facebook -->
@@ -19,12 +19,23 @@
     <meta property="twitter:description" content="Transform Claude Code with 11 specialized AI experts, intelligent automation, and safety-first design.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Styrene';
+            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Styrene Display';
+            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+            font-display: swap;
+        }
+    </style>
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -46,16 +57,17 @@
     }
     </script>
 </head>
-<body>
+<body data-theme="light">
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <span class="nav__logo">🔮</span>
+                <span class="nav__logo">♾️</span>
                 <span class="nav__title">Claude Buddy</span>
             </div>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
+                    <li class="nav__item"><a href="#integration" class="nav__link">Integration</a></li>
                     <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                     <li class="nav__item"><a href="#personas" class="nav__link">Personas</a></li>
                     <li class="nav__item"><a href="#installation" class="nav__link">Install</a></li>
@@ -63,6 +75,10 @@
                 </ul>
             </div>
             <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle__light">☀️</span>
+                    <span class="theme-toggle__dark">🌙</span>
+                </button>
                 <a href="https://github.com/gsetsero/claude-buddy#readme" class="btn btn--primary" target="_blank">Get Started</a>
             </div>
             <div class="nav__toggle" id="nav-toggle">
@@ -78,13 +94,12 @@
         <div class="hero__container container">
             <div class="hero__content">
                 <h1 class="hero__title">
-                    Transform Claude Code into an 
-                    <span class="hero__title--accent">AI Development Powerhouse</span>
+                    Enhanced Claude Code with
+                    <span class="hero__title--accent">Expert AI Personas</span>
                 </h1>
                 <p class="hero__description">
-                    11 specialized AI experts, intelligent automation, and safety-first design. 
-                    Claude Buddy supercharges your development workflow with domain-specific personas 
-                    and context-aware assistance.
+                    Extend Claude Code's capabilities with 11 specialized AI experts. 
+                    Get domain-specific insights, automated workflows, and enhanced safety—all integrated seamlessly into your Claude Code experience.
                 </p>
                 <div class="hero__actions">
                     <a href="https://github.com/gsetsero/claude-buddy" 
@@ -118,19 +133,71 @@
                 </div>
             </div>
             <div class="hero__visual">
-                <div class="personas-preview">
-                    <div class="persona-orbit">
-                        <div class="persona-node persona-node--architect">🏗️</div>
-                        <div class="persona-node persona-node--security">🛡️</div>
-                        <div class="persona-node persona-node--frontend">🎨</div>
-                        <div class="persona-node persona-node--backend">⚙️</div>
-                        <div class="persona-node persona-node--performance">⚡</div>
-                        <div class="persona-node persona-node--qa">🧪</div>
+                <div class="integration-preview">
+                    <div class="code-comparison">
+                        <div class="code-panel">
+                            <div class="code-panel__header">Claude Code</div>
+                            <div class="code-panel__content">
+                                <span class="code-comment"># Standard Claude Code</span>
+                                <span class="code-line">$ claude "Fix this bug"</span>
+                                <span class="code-output">→ Generic assistance</span>
+                            </div>
+                        </div>
+                        <div class="code-panel code-panel--enhanced">
+                            <div class="code-panel__header">Claude Code + Buddy</div>
+                            <div class="code-panel__content">
+                                <span class="code-comment"># Enhanced with personas</span>
+                                <span class="code-line">$ /buddy:analyze</span>
+                                <span class="code-output">→ 🛡️ Security + ⚡ Performance</span>
+                                <span class="code-output">→ Multi-expert analysis</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="personas-center">
-                        <div class="claude-logo">🔮</div>
-                        <span class="personas-label">11 AI Experts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration" id="integration">
+        <div class="container">
+            <h2 class="section__title">Seamless Claude Code Integration</h2>
+            <p class="section__subtitle">Claude Buddy enhances your existing Claude Code setup without replacing it</p>
+            
+            <div class="integration__diagram">
+                <div class="integration__flow">
+                    <div class="flow-item">
+                        <div class="flow-item__icon">🤖</div>
+                        <h3>Claude Code</h3>
+                        <p>Your foundation</p>
                     </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">
+                        <div class="flow-item__icon">➕</div>
+                        <h3>Claude Buddy</h3>
+                        <p>Enhanced capabilities</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item flow-item--result">
+                        <div class="flow-item__icon">🚀</div>
+                        <h3>Supercharged Experience</h3>
+                        <p>Expert personas + automation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="integration__features">
+                <div class="integration-card">
+                    <h3>🔗 Zero Configuration</h3>
+                    <p>Works instantly with your existing Claude Code installation. No complex setup or migration required.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>🎯 Local Processing</h3>
+                    <p>All enhancements happen locally. No external API calls, keeping your code secure and private.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>🔄 Seamless Workflow</h3>
+                    <p>Use Claude Code normally while gaining access to specialized personas and enhanced commands.</p>
                 </div>
             </div>
         </div>
@@ -139,7 +206,7 @@
     <!-- Before/After Section -->
     <section class="comparison">
         <div class="container">
-            <h2 class="section__title">Before vs After Claude Buddy</h2>
+            <h2 class="section__title">Transform Your Development Experience</h2>
             <div class="comparison__grid">
                 <div class="comparison__card comparison__card--before">
                     <div class="comparison__header">
@@ -147,11 +214,11 @@
                         <h3>Before</h3>
                     </div>
                     <ul class="comparison__list">
-                        <li>Generic AI responses without domain expertise</li>
-                        <li>Manual code reviews and quality checks</li>
-                        <li>Repetitive documentation tasks</li>
-                        <li>No context-aware assistance</li>
-                        <li>Risk of dangerous command execution</li>
+                        <li>General-purpose AI assistance</li>
+                        <li>Basic code suggestions</li>
+                        <li>Limited context understanding</li>
+                        <li>Manual workflow management</li>
+                        <li>Standard safety measures</li>
                     </ul>
                 </div>
                 <div class="comparison__card comparison__card--after">
@@ -160,11 +227,11 @@
                         <h3>After</h3>
                     </div>
                     <ul class="comparison__list">
-                        <li>11 specialized AI experts with domain knowledge</li>
-                        <li>Automated multi-persona code reviews</li>
-                        <li>Intelligent slash commands for common tasks</li>
-                        <li>Context-aware assistance that learns</li>
-                        <li>Built-in safety hooks and file protection</li>
+                        <li>Domain-specific AI personas for expert guidance</li>
+                        <li>Automated workflows with intelligent commands</li>
+                        <li>Enhanced context awareness and project understanding</li>
+                        <li>Advanced safety hooks preventing risky operations</li>
+                        <li>Seamless integration with Claude Code</li>
                     </ul>
                 </div>
             </div>
@@ -534,7 +601,7 @@ npx claude-buddy --project</code></pre>
                         <span class="stat__label">External API Calls</span>
                     </div>
                     <div class="stat">
-                        <span class="stat__number">∞</span>
+                        <span class="stat__number">♾️</span>
                         <span class="stat__label">Possibilities</span>
                     </div>
                 </div>
@@ -548,7 +615,7 @@ npx claude-buddy --project</code></pre>
             <div class="footer__content">
                 <div class="footer__section">
                     <div class="footer__brand">
-                        <span class="footer__logo">🔮</span>
+                        <span class="footer__logo">♾️</span>
                         <span class="footer__title">Claude Buddy</span>
                     </div>
                     <p class="footer__description">
