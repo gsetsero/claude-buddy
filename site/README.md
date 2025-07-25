@@ -60,7 +60,7 @@ A professional, Claude Code-inspired landing page designed to showcase Claude Bu
 
 ### 5. Persona Gallery
 - **Professional persona cards** with clean hover animations
-- **11 specialized AI experts** each with icons, descriptions, and tags
+- **12 specialized AI experts** each with icons, descriptions, and tags
 - **Responsive grid layout** adapting to screen sizes
 - **Click interactions** for detailed persona information
 
@@ -73,7 +73,7 @@ A professional, Claude Code-inspired landing page designed to showcase Claude Bu
 ### 7. Call-to-Action
 - **Professional headline** with brand-consistent colors
 - **GitHub and documentation links** as primary actions
-- **Statistics display** (11 AI Experts, 0 External API Calls, ♾️ Possibilities)
+- **Statistics display** (12 AI Experts, 0 External API Calls, ♾️ Possibilities)
 - **Trust signals** emphasizing open source and privacy
 
 ### 8. Footer

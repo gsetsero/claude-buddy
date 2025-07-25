@@ -143,6 +143,59 @@ tasks:
       - cd {{.DIST_DIR}} && npm publish
       - echo "Published {{.PROJECT_NAME}} v{{.VERSION}}!"
 
+  "site:deploy":
+    desc: Deploy site to GitHub Pages
+    cmds:
+      - echo "Deploying site to GitHub Pages..."
+      - |
+        # Create temporary directory
+        TEMP_DIR="temp-gh-pages-$(date +%s)"
+        echo "Creating temporary directory: $TEMP_DIR"
+        
+        # Clone gh-pages branch into temp directory
+        if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+          echo "Checking out existing gh-pages branch..."
+          git clone -b gh-pages --single-branch . "$TEMP_DIR"
+        else
+          echo "Creating new gh-pages branch..."
+          git clone --single-branch . "$TEMP_DIR"
+          cd "$TEMP_DIR"
+          git checkout --orphan gh-pages
+          git rm -rf .
+          cd ..
+        fi
+        
+        # Copy site content to temp directory
+        echo "Copying site content..."
+        cp -r site/* "$TEMP_DIR/"
+        
+        # Navigate to temp directory and commit
+        cd "$TEMP_DIR"
+        git add .
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to deploy"
+        else
+          echo "Generating commit message with Claude..."
+          
+          # Generate commit message using Claude
+          COMMIT_MSG=$(claude --no-desktop "Analyze the changes in the site/ folder and generate a professional conventional commit message for deploying the website to GitHub Pages. Context: This is a deployment of the Claude Buddy landing page. Changes may include persona updates, content modifications, or design improvements. Use 'feat(site):' as the commit type prefix. Include a brief summary and bullet points of key changes. Add deployment metadata at the end. Generate only the commit message, no additional text." 2>/dev/null || printf "feat(site): deploy website updates\n\n- Updated website content and assets\n- Refreshed landing page with latest changes\n- Deployed static site to GitHub Pages\n\nDeployed from commit \$(git rev-parse --short HEAD) on \$(date)")
+          
+          echo "Committing changes..."
+          git commit -m "$COMMIT_MSG"
+          
+          echo "Pushing to gh-pages branch..."
+          git push origin gh-pages
+          echo "Site deployed successfully!"
+        fi
+        
+        # Clean up
+        cd ..
+        echo "Cleaning up temporary directory..."
+        rm -rf "$TEMP_DIR"
+        echo "Deployment complete!"
+
   help:
     desc: Show detailed help for common workflows
     cmds:
@@ -166,5 +219,8 @@ tasks:
         echo "  task version:patch  - Bump patch version"
         echo "  task publish:dry    - Test publish process"
         echo "  task publish        - Publish to npm"
+        echo ""
+        echo "Site Deployment:"
+        echo "  task site:deploy    - Deploy site to GitHub Pages"
         echo ""
         echo "For full task list: task --list"
