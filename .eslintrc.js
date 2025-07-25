@@ -43,6 +43,7 @@ module.exports = {
   ignorePatterns: [
     'dist/',
     'node_modules/',
+    'tests/',
     '*.js',
     'jest.config.js',
     'jest-resolver.js',

@@ -40,19 +40,6 @@ tasks:
     generates:
       - node_modules/.package-lock.json
 
-  dev:
-    desc: Start development mode
-    cmds:
-      - echo "Starting Claude Buddy development environment..."
-      - echo "Press Ctrl+C to stop"
-      - |
-        if command -v nodemon >/dev/null; then
-          npx nodemon --watch src --ext js,ts,md,json \
-            --exec "echo 'Files changed, ready for testing...'"
-        else
-          echo "Install nodemon for file watching: npm install -g nodemon"
-        fi
-
   test:
     desc: Run all tests
     cmds:
@@ -84,7 +71,7 @@ tasks:
       - echo "Linting code..."
       - |
         if command -v eslint >/dev/null || [ -f "node_modules/.bin/eslint" ]; then
-          npx eslint . --ext .js,.ts --fix --quiet || echo "Linting issues found"
+          npx eslint src/ --ext .ts --fix --quiet || echo "Linting issues found"
         else
           echo "ESLint not found. Install with: npm install -g eslint"
         fi
@@ -125,24 +112,6 @@ tasks:
         git commit -m "chore: bump version to v$VERSION"
         git tag -a "v$VERSION" -m "Release v$VERSION"
         echo "Tagged version v$VERSION"
-
-  "publish:dry":
-    desc: Test publish process
-    deps: [build, test]
-    cmds:
-      - echo "Dry run publish..."
-      - cd {{.DIST_DIR}} && npm publish --dry-run
-
-  publish:
-    desc: Publish to npm
-    deps: [build, test]
-    preconditions:
-      - test -f {{.DIST_DIR}}/package.json
-    prompt:
-      - "Are you sure you want to publish {{.PROJECT_NAME}} v{{.VERSION}}?"
-    cmds:
-      - cd {{.DIST_DIR}} && npm publish
-      - echo "Published {{.PROJECT_NAME}} v{{.VERSION}}!"
 
   "site:deploy":
     desc: Deploy site to GitHub Pages
