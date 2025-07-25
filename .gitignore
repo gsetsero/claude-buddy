@@ -40,3 +40,6 @@ temp-*/
 # Logs
 *.log
 logs/
+
+# Task runner cache
+.task
