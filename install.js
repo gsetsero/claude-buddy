@@ -18,7 +18,7 @@ const program = new Command();
 
 // Package information
 const PACKAGE_NAME = 'claude-buddy';
-const VERSION = '1.0.0';
+const VERSION = require('./package.json').version;
 
 // Installation modes
 const INSTALL_MODES = {
