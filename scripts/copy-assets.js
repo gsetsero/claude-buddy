@@ -33,6 +33,10 @@ async function copyAssets() {
     await fs.copy('src/personas/specialists', 'dist/personas/specialists');
     console.log('✓ Copied personas/specialists');
     
+    // Copy scripts
+    await fs.copy('scripts', 'dist/scripts');
+    console.log('✓ Copied scripts');
+    
     console.log('Asset copying completed successfully!');
   } catch (error) {
     console.error('Error copying assets:', error.message);

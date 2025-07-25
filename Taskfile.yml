@@ -69,6 +69,7 @@ tasks:
       - cp install.js {{.DIST_DIR}}/
       - cp package.json {{.DIST_DIR}}/
       - cp README.md {{.DIST_DIR}}/
+      - cp -r scripts {{.DIST_DIR}}/
       - echo "Build completed in {{.DIST_DIR}}/"
 
   "clean:build":
