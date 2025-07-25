@@ -168,6 +168,13 @@ tasks:
         rm -rf "$TEMP_DIR"
         echo "Deployment complete!"
 
+  "update:global":
+    desc: Update global claude-buddy npm package
+    cmds:
+      - echo "Current version:" && claude-buddy --version
+      - npm update -g claude-buddy
+      - echo "Updated version:" && claude-buddy --version
+
   help:
     desc: Show detailed help for common workflows
     cmds:
@@ -186,6 +193,7 @@ tasks:
         echo "  task clean          - Clean build artifacts"
         echo "  task analyze        - Analyze project structure"
         echo "  task security:audit - Check for vulnerabilities"
+        echo "  task update:global  - Update global claude-buddy package"
         echo ""
         echo "Publishing:"
         echo "  task version:patch  - Bump patch version"
