@@ -109,3 +109,6 @@ coverage/
 # Temporary files
 tmp/
 temp/
+
+# Task runner cache
+.task/
