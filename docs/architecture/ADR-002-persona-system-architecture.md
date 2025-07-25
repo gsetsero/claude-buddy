@@ -1,4 +1,4 @@
-# ADR-002: 11-Persona Intelligent System Architecture
+# ADR-002: 12-Persona Intelligent System Architecture
 
 **Status**: Accepted  
 **Date**: 2024-07-22  
@@ -18,15 +18,15 @@ Traditional single-persona approaches were insufficient for the diverse range of
 
 ## Decision
 
-Implement an 11-persona intelligent coordination system with four core components:
+Implement a 12-persona intelligent coordination system with four core components:
 1. **PersonaSystem**: Main coordinator for the entire system
 2. **PersonaManager**: Central persona lifecycle and collaboration management  
 3. **PersonaActivationEngine**: Context-driven auto-detection and recommendation
 4. **PersonaLearningEngine**: Adaptive pattern recognition and user preference learning
 
-The system features 11 specialized personas organized into three categories:
+The system features 12 specialized personas organized into three categories:
 - **Technical Specialists**: Security, Performance, Frontend, Backend, DevOps
-- **Process Experts**: Architect, QA, Refactorer
+- **Process Experts**: Architect, QA, Refactorer, PO (Product Owner)
 - **Knowledge Specialists**: Analyzer, Mentor, Scribe
 
 ## Options Considered
@@ -51,7 +51,7 @@ The system features 11 specialized personas organized into three categories:
   - No learning capabilities
   - Manual rule maintenance overhead
 
-### Option 3: 11-Persona Intelligent System (Selected)
+### Option 3: 12-Persona Intelligent System (Selected)
 - **Pros**: 
   - Domain expertise for specialized tasks
   - Intelligent auto-activation based on context
@@ -103,7 +103,7 @@ The system features 11 specialized personas organized into three categories:
    - Integrates learning recommendations into activation decisions
 
 2. **PersonaManager**:
-   - Loads and manages 11 persona definitions from markdown files
+   - Loads and manages 12 persona definitions from markdown files
    - Implements collaboration planning and validation chains
    - Generates persona-aware prompts for Claude Code
    - Records interaction data for learning
@@ -133,6 +133,7 @@ The system features 11 specialized personas organized into three categories:
 - Architect: System design, patterns, technical decisions
 - QA: Testing strategies, quality assurance, validation
 - Refactorer: Code improvement, technical debt, maintainability
+- PO: Product requirements, user stories, strategic planning
 
 **Knowledge Specialists**:
 - Analyzer: Code analysis, investigation, problem diagnosis
@@ -159,7 +160,7 @@ Success indicators:
 - ✅ User satisfaction ratings >4.0/5.0 for persona recommendations
 - ✅ Multi-persona collaboration working for complex tasks
 - ✅ Learning system improving activation quality over time
-- ✅ All 11 personas properly loaded and functional
+- ✅ All 12 personas properly loaded and functional
 
 Ongoing monitoring:
 - Persona activation frequency and success rates

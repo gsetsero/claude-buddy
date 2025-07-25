@@ -14,7 +14,7 @@ Claude Buddy supercharges Claude Code with intelligent workflows, domain-specifi
 ## ✨ Features
 
 ### 🎭 **Intelligent Persona System**
-- **11 Domain Experts**: Specialized AI personas for architecture, frontend, backend, security, performance, and more
+- **12 Domain Experts**: Specialized AI personas for architecture, frontend, backend, security, performance, product ownership, and more
 - **Auto-Activation**: Context-aware persona selection based on project analysis and user intent
 - **Manual Control**: Fine-grained persona control with `--persona-{name}` and `--with-{name}` flags
 - **Collaborative Intelligence**: Multi-persona coordination for comprehensive solutions
@@ -35,6 +35,7 @@ Claude Buddy supercharges Claude Code with intelligent workflows, domain-specifi
 - **`/buddy:readme`** - Generate professional README files
 - **`/buddy:docs`** - Create technical documentation
 - **`/buddy:brainstorm`** - AI-powered feature ideation and improvements
+- **`/buddy:po`** - Generate comprehensive Product Requirement Prompts (PRPs)
 
 ### 🔒 **Security-First Design**
 - Real-time protection against accidental data exposure
@@ -120,7 +121,7 @@ After installation, restart Claude Code and try:
 
 ### 🎭 Persona System
 
-Claude Buddy features an intelligent persona system with 11 domain experts that automatically activate based on context or can be manually controlled.
+Claude Buddy features an intelligent persona system with 12 domain experts that automatically activate based on context or can be manually controlled.
 
 #### Available Personas
 - **🏗️ Architect**: Systems design, scalability, architecture patterns
@@ -134,6 +135,7 @@ Claude Buddy features an intelligent persona system with 11 domain experts that 
 - **🚀 DevOps**: Infrastructure, deployment, observability
 - **👨‍🏫 Mentor**: Knowledge transfer, education, guidance
 - **✍️ Scribe**: Professional writing, documentation
+- **📋 PO**: Product requirements, user stories, strategic planning
 
 #### Automatic Activation
 ```bash
@@ -248,6 +250,17 @@ The system learns from your usage patterns and feedback to improve persona activ
 - Feature gap analysis
 - Technology recommendations
 - Innovation opportunities
+
+#### `/buddy:po` - Product Requirement Prompts
+```bash
+/buddy:po "E-commerce recommendation engine"      # Generate PRP for specific product
+/buddy:po "Mobile app for task management"        # Create comprehensive requirements
+```
+- Comprehensive Product Requirement Prompt (PRP) generation
+- User stories with acceptance criteria
+- Technical implementation blueprints
+- Validation and testing strategies
+- Resource and timeline estimation
 
 ### Safety Hooks
 

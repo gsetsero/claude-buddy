@@ -217,7 +217,7 @@ class ActivationAnalyzer {
     
     // Unused personas
     const { personaUsage } = analytics.personaManager;
-    const unusedPersonas = ['security', 'performance', 'frontend', 'backend', 'devops', 'architect', 'qa', 'refactorer', 'analyzer', 'mentor', 'scribe']
+    const unusedPersonas = ['security', 'performance', 'frontend', 'backend', 'devops', 'architect', 'qa', 'refactorer', 'analyzer', 'mentor', 'scribe', 'po']
       .filter(persona => !personaUsage[persona] || personaUsage[persona].count === 0);
     
     if (unusedPersonas.length > 0) {

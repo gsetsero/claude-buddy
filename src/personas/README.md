@@ -5,7 +5,7 @@ A sophisticated persona system that brings domain expertise and intelligent cont
 ## Overview
 
 The persona system automatically activates domain-specific expertise based on context analysis, providing:
-- **11 Specialized Personas**: Technical, process, and knowledge experts
+- **12 Specialized Personas**: Technical, process, and knowledge experts
 - **Intelligent Auto-Activation**: Multi-factor context analysis
 - **Manual Override Control**: Flag-based persona selection
 - **Collaborative Intelligence**: Multi-persona coordination
@@ -30,7 +30,8 @@ src/personas/
 │   ├── refactorer.md              # Code quality and technical debt manager
 │   ├── devops.md                   # Infrastructure and deployment expert
 │   ├── mentor.md                   # Knowledge transfer specialist
-│   └── scribe.md                   # Professional writer and documentarian
+│   ├── scribe.md                   # Professional writer and documentarian
+│   └── po.md                       # Product Owner and requirement specialist
 ├── auto-activation.js              # Context detection and scoring engine
 ├── persona-manager.js              # Central coordination and selection logic
 ├── flag-parser.js                  # Manual override flag processing
@@ -52,6 +53,7 @@ src/personas/
 - **🧪 QA**: Quality assurance, testing strategies, quality gates
 - **🔧 Refactorer**: Code quality, technical debt management, maintainability
 - **🚀 DevOps**: Infrastructure, deployment, observability, automation
+- **📋 PO**: Product requirements, user stories, strategic planning
 
 ### Knowledge & Communication
 - **👨‍🏫 Mentor**: Knowledge transfer, education, skill development

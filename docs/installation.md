@@ -149,7 +149,7 @@ The installer performs these steps:
 
 ### 4. Component Installation
 - **Slash Commands**: AI-powered development commands with persona intelligence
-- **Persona System**: 11 domain expert specialists with auto-activation
+- **Persona System**: 12 domain expert specialists with auto-activation
 - **Safety Hooks**: File protection and command validation
 - **Configuration**: Default settings and persona preferences
 
