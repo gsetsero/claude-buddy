@@ -1,6 +1,6 @@
 {
   "name": "claude-buddy",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Your friendly AI development companion for Claude Code - supercharge Claude Code with intelligent workflows and safety features",
   "main": "install.js",
   "types": "dist/types/index.d.ts",
