@@ -154,6 +154,20 @@
       },
       "specializations": ["technical_writing", "documentation", "professional_communication", "content_creation", "localization"],
       "compatible_with": ["mentor", "qa", "frontend"]
+    },
+    "po": {
+      "name": "po",
+      "category": "process_expert",
+      "description": "Product requirement specialist and strategic planner",
+      "priority_hierarchy": ["user_value", "market_fit", "technical_feasibility", "resource_optimization"],
+      "auto_activation": {
+        "keywords": ["product requirements", "prp", "user stories", "acceptance criteria", "product spec", "roadmap", "feature", "mvp", "product owner", "stakeholder"],
+        "file_patterns": ["*requirements*", "*spec*", "*prp*", "*product*", "*roadmap*", "PRPs/**"],
+        "confidence_weight": 0.85,
+        "complexity_threshold": 0.5
+      },
+      "specializations": ["product_requirements", "user_stories", "acceptance_criteria", "market_analysis", "strategic_planning"],
+      "compatible_with": ["architect", "scribe", "mentor"]
     }
   },
   "auto_activation": {
@@ -175,12 +189,16 @@
     "frontend_qa": "User-focused development with testing",
     "mentor_scribe": "Educational content creation",
     "analyzer_refactorer": "Root cause analysis with code improvement",
-    "devops_security": "Infrastructure automation with security compliance"
+    "devops_security": "Infrastructure automation with security compliance",
+    "po_architect": "Product requirements with technical feasibility",
+    "po_scribe": "Product documentation and requirement specs",
+    "po_mentor": "Stakeholder education and alignment"
   },
   "validation_chain": {
     "security_validation": ["security", "backend"],
     "quality_validation": ["qa", "refactorer"],
     "performance_validation": ["performance", "architect"],
-    "user_experience_validation": ["frontend", "mentor"]
+    "user_experience_validation": ["frontend", "mentor"],
+    "product_requirement_validation": ["po", "architect", "scribe"]
   }
 }

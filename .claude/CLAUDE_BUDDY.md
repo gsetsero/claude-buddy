@@ -85,7 +85,7 @@ For issues or questions, visit: https://github.com/claude-buddy/claude-buddy
 
 ---
 
-Installed on: 2025-07-24T13:11:04.435Z
+Installed on: 2025-07-25T22:49:59.622Z
 Mode: project
-Version: 1.0.0
+Version: 1.0.11
 Persona System: Enabled with 11 domain experts
