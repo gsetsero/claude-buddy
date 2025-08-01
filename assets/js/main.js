@@ -379,7 +379,106 @@ function showPersonaModal(personaName, cardElement) {
                 '/buddy:improve --persona-security'
             ]
         },
-        // Add more persona data as needed
+        frontend: {
+            title: '🎨 Frontend Expert',
+            description: 'UI/UX, accessibility, responsive design',
+            details: 'The Frontend persona specializes in user interface development, accessibility standards, responsive design patterns, and modern frontend frameworks. It helps optimize user experience and ensures cross-browser compatibility.',
+            examples: [
+                '/buddy:analyze --persona-frontend',
+                '/buddy:improve --focus accessibility',
+                '/buddy:review --persona-frontend'
+            ]
+        },
+        backend: {
+            title: '⚙️ Backend Expert',
+            description: 'APIs, databases, server reliability',
+            details: 'The Backend persona focuses on server-side development, API design, database optimization, and system reliability. It helps with performance tuning, scalability, and implementing robust error handling.',
+            examples: [
+                '/buddy:analyze --persona-backend',
+                '/buddy:architect --focus api-design',
+                '/buddy:improve --persona-backend'
+            ]
+        },
+        performance: {
+            title: '⚡ Performance Expert',
+            description: 'Optimization, bottlenecks, efficiency',
+            details: 'The Performance persona specializes in identifying and resolving performance bottlenecks, optimizing code execution, and improving system efficiency. It helps with profiling, caching strategies, and load optimization.',
+            examples: [
+                '/buddy:analyze --focus performance',
+                '/buddy:improve --persona-performance',
+                '/buddy:profile --comprehensive'
+            ]
+        },
+        devops: {
+            title: '🚀 DevOps Expert',
+            description: 'Infrastructure, deployment, observability',
+            details: 'The DevOps persona focuses on CI/CD pipelines, infrastructure as code, containerization, and monitoring. It helps streamline deployment processes and ensures system reliability and observability.',
+            examples: [
+                '/buddy:analyze --persona-devops',
+                '/buddy:deploy --check-ready',
+                '/buddy:improve --focus ci-cd'
+            ]
+        },
+        qa: {
+            title: '🧪 QA Expert',
+            description: 'Quality assurance, testing, validation',
+            details: 'The QA persona specializes in test strategy, test automation, and quality validation. It helps design comprehensive test suites, identify edge cases, and ensure code reliability through systematic testing.',
+            examples: [
+                '/buddy:test --comprehensive',
+                '/buddy:analyze --persona-qa',
+                '/buddy:review --focus testing'
+            ]
+        },
+        analyzer: {
+            title: '🔍 Analyzer',
+            description: 'Root cause analysis, systematic investigation',
+            details: 'The Analyzer persona excels at debugging complex issues, performing root cause analysis, and systematic code investigation. It helps trace bugs, understand code flow, and identify hidden dependencies.',
+            examples: [
+                '/buddy:analyze --deep',
+                '/buddy:debug --comprehensive',
+                '/buddy:trace --persona-analyzer'
+            ]
+        },
+        refactorer: {
+            title: '🔧 Refactorer',
+            description: 'Code quality, technical debt, maintainability',
+            details: 'The Refactorer persona focuses on improving code quality, reducing technical debt, and enhancing maintainability. It applies clean code principles, design patterns, and helps modernize legacy code.',
+            examples: [
+                '/buddy:refactor --comprehensive',
+                '/buddy:improve --persona-refactorer',
+                '/buddy:analyze --focus maintainability'
+            ]
+        },
+        mentor: {
+            title: '👨‍🏫 Mentor',
+            description: 'Knowledge transfer, education, guidance',
+            details: 'The Mentor persona specializes in explaining complex concepts, providing learning resources, and guiding best practices. It helps junior developers understand code, patterns, and architectural decisions.',
+            examples: [
+                '/buddy:explain --comprehensive',
+                '/buddy:mentor --topic architecture',
+                '/buddy:review --educational'
+            ]
+        },
+        scribe: {
+            title: '✍️ Scribe',
+            description: 'Professional writing, documentation',
+            details: 'The Scribe persona excels at creating clear, comprehensive documentation. It helps write README files, API documentation, code comments, and user guides with a focus on clarity and completeness.',
+            examples: [
+                '/buddy:document --comprehensive',
+                '/buddy:commit --detailed',
+                '/buddy:readme --professional'
+            ]
+        },
+        po: {
+            title: '📋 Product Owner',
+            description: 'Product requirements, user stories, strategic planning',
+            details: 'The Product Owner persona focuses on translating business needs into technical requirements. It helps create user stories, define acceptance criteria, and align technical decisions with product strategy.',
+            examples: [
+                '/buddy:requirements --from-idea',
+                '/buddy:stories --comprehensive',
+                '/buddy:analyze --business-impact'
+            ]
+        }
     };
 
     const data = personaData[personaName];
@@ -404,7 +503,7 @@ function showPersonaModal(personaName, cardElement) {
                 </ul>
             </div>
             <div class="persona-modal__footer">
-                <a href="https://github.com/gsetsero/assistant-integration/blob/master/claude-buddy/README.md" 
+                <a href="https://github.com/gsetsero/claude-buddy#readme" 
                    class="btn btn--primary" target="_blank">Learn More on GitHub</a>
             </div>
         </div>
