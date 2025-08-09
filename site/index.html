@@ -17,6 +17,9 @@
     <meta name="description" content="Enhance Claude Code with 12 specialized AI experts. Get domain-specific insights, automated workflows, and advanced safety features.">
     <meta name="keywords" content="Claude Code, AI development, coding assistant, personas, automation, TypeScript, JavaScript, Python">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://claude-buddy.dev/">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Claude Buddy - AI Development Powerhouse">
@@ -29,7 +32,7 @@
     <meta property="twitter:description" content="Transform Claude Code with 12 specialized AI experts, intelligent automation, and safety-first design.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' role='img' aria-label='Claude Buddy Logo'><text y='.9em' font-size='90'>♾️</text></svg>">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +75,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <span class="nav__logo">♾️</span>
+                <span class="nav__logo" role="img" aria-label="Claude Buddy infinity logo">♾️</span>
                 <span class="nav__title">Claude Buddy</span>
             </div>
             <div class="nav__menu" id="nav-menu">
@@ -86,8 +89,8 @@
             </div>
             <div class="nav__actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <span class="theme-toggle__light">☀️</span>
-                    <span class="theme-toggle__dark">🌙</span>
+                    <span class="theme-toggle__light" role="img" aria-label="Light mode">☀️</span>
+                    <span class="theme-toggle__dark" role="img" aria-label="Dark mode">🌙</span>
                 </button>
                 <a href="https://github.com/gsetsero/claude-buddy#readme" class="btn btn--primary" target="_blank">Get Started</a>
             </div>
@@ -114,7 +117,7 @@
                 <div class="hero__actions">
                     <a href="https://github.com/gsetsero/claude-buddy" 
                        class="btn btn--primary btn--large" target="_blank">
-                        <span>🚀</span> Explore on GitHub
+                        <span role="img" aria-label="Rocket">🚀</span> Explore on GitHub
                     </a>
                     <a href="#features" class="btn btn--secondary btn--large">
                         Learn More
@@ -132,7 +135,7 @@
                             <div class="terminal__line">
                                 <span class="terminal__prompt">$</span>
                                 <span class="terminal__command">npm install -g claude-buddy</span>
-                                <button class="terminal__copy" onclick="copyToClipboard('npm install -g claude-buddy')">📋</button>
+                                <button class="terminal__copy" onclick="copyToClipboard('npm install -g claude-buddy')" aria-label="Copy to clipboard"><span role="img" aria-label="Clipboard">📋</span></button>
                             </div>
                             <div class="terminal__line">
                                 <span class="terminal__prompt">$</span>
@@ -177,19 +180,19 @@
             <div class="integration__diagram">
                 <div class="integration__flow">
                     <div class="flow-item">
-                        <div class="flow-item__icon">🤖</div>
+                        <div class="flow-item__icon" role="img" aria-label="Robot">🤖</div>
                         <h3>Claude Code</h3>
                         <p>Your foundation</p>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-item">
-                        <div class="flow-item__icon">➕</div>
+                        <div class="flow-item__icon" role="img" aria-label="Plus">➕</div>
                         <h3>Claude Buddy</h3>
                         <p>Enhanced capabilities</p>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-item flow-item--result">
-                        <div class="flow-item__icon">🚀</div>
+                        <div class="flow-item__icon" role="img" aria-label="Rocket">🚀</div>
                         <h3>Supercharged Experience</h3>
                         <p>Expert personas + automation</p>
                     </div>
@@ -198,15 +201,15 @@
             
             <div class="integration__features">
                 <div class="integration-card">
-                    <h3>🔗 Zero Configuration</h3>
+                    <h3><span role="img" aria-label="Link">🔗</span> Zero Configuration</h3>
                     <p>Works instantly with your existing Claude Code installation. No complex setup or migration required.</p>
                 </div>
                 <div class="integration-card">
-                    <h3>🎯 Local Processing</h3>
+                    <h3><span role="img" aria-label="Target">🎯</span> Local Processing</h3>
                     <p>All enhancements happen locally. No external API calls, keeping your code secure and private.</p>
                 </div>
                 <div class="integration-card">
-                    <h3>🔄 Seamless Workflow</h3>
+                    <h3><span role="img" aria-label="Refresh">🔄</span> Seamless Workflow</h3>
                     <p>Use Claude Code normally while gaining access to specialized personas and enhanced commands.</p>
                 </div>
             </div>
@@ -220,7 +223,7 @@
             <div class="comparison__grid">
                 <div class="comparison__card comparison__card--before">
                     <div class="comparison__header">
-                        <span class="comparison__icon">😤</span>
+                        <span class="comparison__icon" role="img" aria-label="Frustrated">😤</span>
                         <h3>Before</h3>
                     </div>
                     <ul class="comparison__list">
@@ -233,7 +236,7 @@
                 </div>
                 <div class="comparison__card comparison__card--after">
                     <div class="comparison__header">
-                        <span class="comparison__icon">🚀</span>
+                        <span class="comparison__icon" role="img" aria-label="Rocket">🚀</span>
                         <h3>After</h3>
                     </div>
                     <ul class="comparison__list">
@@ -256,7 +259,7 @@
             <!-- Persona System -->
             <div class="feature-block">
                 <div class="feature-block__content">
-                    <div class="feature-block__icon">🎭</div>
+                    <div class="feature-block__icon" role="img" aria-label="Theater masks">🎭</div>
                     <h3 class="feature-block__title">Intelligent Persona System</h3>
                     <p class="feature-block__description">
                         12 specialized AI experts automatically activate based on your project context. 
@@ -278,8 +281,8 @@
                         </div>
                         <div class="command-demo__output">
                             <div class="persona-activation">
-                                <span class="persona-tag persona-tag--security">🛡️ Security Expert</span>
-                                <span class="persona-tag persona-tag--analyzer">🔍 Analyzer</span>
+                                <span class="persona-tag persona-tag--security"><span role="img" aria-label="Shield">🛡️</span> Security Expert</span>
+                                <span class="persona-tag persona-tag--analyzer"><span role="img" aria-label="Magnifying glass">🔍</span> Analyzer</span>
                             </div>
                             <p class="analysis-text">Activating security and analysis personas based on context...</p>
                         </div>
@@ -290,7 +293,7 @@
             <!-- Safety Hooks -->
             <div class="feature-block feature-block--reverse">
                 <div class="feature-block__content">
-                    <div class="feature-block__icon">🔒</div>
+                    <div class="feature-block__icon" role="img" aria-label="Lock">🔒</div>
                     <h3 class="feature-block__title">Safety-First Design</h3>
                     <p class="feature-block__description">
                         Built-in protection against accidental data exposure and dangerous commands. 
@@ -307,7 +310,7 @@
                     <div class="safety-demo">
                         <div class="safety-alert">
                             <div class="alert alert--danger">
-                                <span class="alert__icon">🛡️</span>
+                                <span class="alert__icon" role="img" aria-label="Shield">🛡️</span>
                                 <div class="alert__content">
                                     <strong>File Protection Active</strong>
                                     <p>Blocked write to .env file - contains sensitive data</p>
@@ -316,7 +319,7 @@
                         </div>
                         <div class="safety-alert">
                             <div class="alert alert--warning">
-                                <span class="alert__icon">🚫</span>
+                                <span class="alert__icon" role="img" aria-label="Prohibited">🚫</span>
                                 <div class="alert__content">
                                     <strong>Dangerous Command Blocked</strong>
                                     <p>Prevented execution of 'rm -rf /'</p>
@@ -330,7 +333,7 @@
             <!-- Slash Commands -->
             <div class="feature-block">
                 <div class="feature-block__content">
-                    <div class="feature-block__icon">⚡</div>
+                    <div class="feature-block__icon" role="img" aria-label="Lightning bolt">⚡</div>
                     <h3 class="feature-block__title">AI-Powered Slash Commands</h3>
                     <p class="feature-block__description">
                         Powerful slash commands that leverage persona intelligence for common development tasks. 
@@ -364,15 +367,15 @@
                             <div class="command-result">
                                 <div class="improvement-suggestions">
                                     <div class="suggestion">
-                                        <span class="suggestion__icon">🔧</span>
+                                        <span class="suggestion__icon" role="img" aria-label="Wrench">🔧</span>
                                         <span class="suggestion__text">Refactor: Extract complex logic into separate functions</span>
                                     </div>
                                     <div class="suggestion">
-                                        <span class="suggestion__icon">⚡</span>
+                                        <span class="suggestion__icon" role="img" aria-label="Lightning">⚡</span>
                                         <span class="suggestion__text">Performance: Optimize database query patterns</span>
                                     </div>
                                     <div class="suggestion">
-                                        <span class="suggestion__icon">🛡️</span>
+                                        <span class="suggestion__icon" role="img" aria-label="Shield">🛡️</span>
                                         <span class="suggestion__text">Security: Add input validation for user data</span>
                                     </div>
                                 </div>
@@ -392,7 +395,7 @@
             
             <div class="personas__grid">
                 <div class="persona-card" data-persona="architect">
-                    <div class="persona-card__icon">🏗️</div>
+                    <div class="persona-card__icon" role="img" aria-label="Building construction">🏗️</div>
                     <h3 class="persona-card__title">Architect</h3>
                     <p class="persona-card__description">Systems design, scalability, architecture patterns</p>
                     <div class="persona-card__tags">
@@ -403,7 +406,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="security">
-                    <div class="persona-card__icon">🛡️</div>
+                    <div class="persona-card__icon" role="img" aria-label="Shield">🛡️</div>
                     <h3 class="persona-card__title">Security</h3>
                     <p class="persona-card__description">Threat modeling, vulnerabilities, compliance</p>
                     <div class="persona-card__tags">
@@ -414,7 +417,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="frontend">
-                    <div class="persona-card__icon">🎨</div>
+                    <div class="persona-card__icon" role="img" aria-label="Artist palette">🎨</div>
                     <h3 class="persona-card__title">Frontend</h3>
                     <p class="persona-card__description">UI/UX, accessibility, responsive design</p>
                     <div class="persona-card__tags">
@@ -425,7 +428,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="backend">
-                    <div class="persona-card__icon">⚙️</div>
+                    <div class="persona-card__icon" role="img" aria-label="Gear">⚙️</div>
                     <h3 class="persona-card__title">Backend</h3>
                     <p class="persona-card__description">APIs, databases, server reliability</p>
                     <div class="persona-card__tags">
@@ -436,7 +439,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="performance">
-                    <div class="persona-card__icon">⚡</div>
+                    <div class="persona-card__icon" role="img" aria-label="Lightning bolt">⚡</div>
                     <h3 class="persona-card__title">Performance</h3>
                     <p class="persona-card__description">Optimization, bottlenecks, efficiency</p>
                     <div class="persona-card__tags">
@@ -447,7 +450,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="devops">
-                    <div class="persona-card__icon">🚀</div>
+                    <div class="persona-card__icon" role="img" aria-label="Rocket">🚀</div>
                     <h3 class="persona-card__title">DevOps</h3>
                     <p class="persona-card__description">Infrastructure, deployment, observability</p>
                     <div class="persona-card__tags">
@@ -458,7 +461,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="qa">
-                    <div class="persona-card__icon">🧪</div>
+                    <div class="persona-card__icon" role="img" aria-label="Test tube">🧪</div>
                     <h3 class="persona-card__title">QA</h3>
                     <p class="persona-card__description">Quality assurance, testing, validation</p>
                     <div class="persona-card__tags">
@@ -469,7 +472,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="analyzer">
-                    <div class="persona-card__icon">🔍</div>
+                    <div class="persona-card__icon" role="img" aria-label="Magnifying glass">🔍</div>
                     <h3 class="persona-card__title">Analyzer</h3>
                     <p class="persona-card__description">Root cause analysis, systematic investigation</p>
                     <div class="persona-card__tags">
@@ -480,7 +483,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="refactorer">
-                    <div class="persona-card__icon">🔧</div>
+                    <div class="persona-card__icon" role="img" aria-label="Wrench">🔧</div>
                     <h3 class="persona-card__title">Refactorer</h3>
                     <p class="persona-card__description">Code quality, technical debt, maintainability</p>
                     <div class="persona-card__tags">
@@ -491,7 +494,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="mentor">
-                    <div class="persona-card__icon">👨‍🏫</div>
+                    <div class="persona-card__icon" role="img" aria-label="Teacher">👨‍🏫</div>
                     <h3 class="persona-card__title">Mentor</h3>
                     <p class="persona-card__description">Knowledge transfer, education, guidance</p>
                     <div class="persona-card__tags">
@@ -502,7 +505,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="scribe">
-                    <div class="persona-card__icon">✍️</div>
+                    <div class="persona-card__icon" role="img" aria-label="Writing hand">✍️</div>
                     <h3 class="persona-card__title">Scribe</h3>
                     <p class="persona-card__description">Professional writing, documentation</p>
                     <div class="persona-card__tags">
@@ -513,7 +516,7 @@
                 </div>
                 
                 <div class="persona-card" data-persona="po">
-                    <div class="persona-card__icon">📋</div>
+                    <div class="persona-card__icon" role="img" aria-label="Clipboard">📋</div>
                     <h3 class="persona-card__title">Product Owner</h3>
                     <p class="persona-card__description">Product requirements, user stories, strategic planning</p>
                     <div class="persona-card__tags">
@@ -534,30 +537,30 @@
             
             <div class="installation__options">
                 <div class="install-option">
-                    <h3 class="install-option__title">🌐 Global Installation</h3>
+                    <h3 class="install-option__title"><span role="img" aria-label="Globe">🌐</span> Global Installation</h3>
                     <p class="install-option__description">Install once, use everywhere (Recommended)</p>
                     <div class="code-block">
-                        <button class="code-block__copy" onclick="copyToClipboard('npm install -g claude-buddy && claude-buddy --global')">📋</button>
+                        <button class="code-block__copy" onclick="copyToClipboard('npm install -g claude-buddy && claude-buddy --global')" aria-label="Copy to clipboard"><span role="img" aria-label="Clipboard">📋</span></button>
                         <pre><code>npm install -g claude-buddy
 claude-buddy --global</code></pre>
                     </div>
                 </div>
                 
                 <div class="install-option">
-                    <h3 class="install-option__title">📁 Project-Specific</h3>
+                    <h3 class="install-option__title"><span role="img" aria-label="Folder">📁</span> Project-Specific</h3>
                     <p class="install-option__description">Install for a specific project</p>
                     <div class="code-block">
-                        <button class="code-block__copy" onclick="copyToClipboard('cd your-project && npx claude-buddy --project')">📋</button>
+                        <button class="code-block__copy" onclick="copyToClipboard('cd your-project && npx claude-buddy --project')" aria-label="Copy to clipboard"><span role="img" aria-label="Clipboard">📋</span></button>
                         <pre><code>cd your-project
 npx claude-buddy --project</code></pre>
                     </div>
                 </div>
                 
                 <div class="install-option">
-                    <h3 class="install-option__title">🤖 Interactive Setup</h3>
+                    <h3 class="install-option__title"><span role="img" aria-label="Robot">🤖</span> Interactive Setup</h3>
                     <p class="install-option__description">Guided installation with prompts</p>
                     <div class="code-block">
-                        <button class="code-block__copy" onclick="copyToClipboard('npx claude-buddy')">📋</button>
+                        <button class="code-block__copy" onclick="copyToClipboard('npx claude-buddy')" aria-label="Copy to clipboard"><span role="img" aria-label="Clipboard">📋</span></button>
                         <pre><code>npx claude-buddy
 # Follow the interactive prompts</code></pre>
                     </div>
@@ -568,21 +571,21 @@ npx claude-buddy --project</code></pre>
                 <h4 class="requirements__title">Prerequisites</h4>
                 <div class="requirements__grid">
                     <div class="requirement">
-                        <span class="requirement__icon">📦</span>
+                        <span class="requirement__icon" role="img" aria-label="Package">📦</span>
                         <div class="requirement__content">
                             <strong>Node.js 18+</strong>
                             <span>Modern JavaScript runtime</span>
                         </div>
                     </div>
                     <div class="requirement">
-                        <span class="requirement__icon">🐍</span>
+                        <span class="requirement__icon" role="img" aria-label="Snake">🐍</span>
                         <div class="requirement__content">
                             <strong>UV</strong>
                             <span>Astral Python Package Manager</span>
                         </div>
                     </div>
                     <div class="requirement">
-                        <span class="requirement__icon">🔮</span>
+                        <span class="requirement__icon" role="img" aria-label="Crystal ball">🔮</span>
                         <div class="requirement__content">
                             <strong>Claude Code</strong>
                             <span>Installed and configured</span>
@@ -605,11 +608,11 @@ npx claude-buddy --project</code></pre>
                 <div class="cta__actions">
                     <a href="https://github.com/gsetsero/claude-buddy" 
                        class="btn btn--primary btn--large" target="_blank">
-                        <span>🚀</span> Get Started on GitHub
+                        <span role="img" aria-label="Rocket">🚀</span> Get Started on GitHub
                     </a>
                     <a href="https://github.com/gsetsero/claude-buddy/tree/main/docs" 
                        class="btn btn--secondary btn--large" target="_blank">
-                        📚 Read Documentation
+                        <span role="img" aria-label="Books">📚</span> Read Documentation
                     </a>
                 </div>
                 <div class="cta__stats">
@@ -622,7 +625,7 @@ npx claude-buddy --project</code></pre>
                         <span class="stat__label">External API Calls</span>
                     </div>
                     <div class="stat">
-                        <span class="stat__number">♾️</span>
+                        <span class="stat__number" role="img" aria-label="Infinity">♾️</span>
                         <span class="stat__label">Possibilities</span>
                     </div>
                 </div>
@@ -636,7 +639,7 @@ npx claude-buddy --project</code></pre>
             <div class="footer__content">
                 <div class="footer__section">
                     <div class="footer__brand">
-                        <span class="footer__logo">♾️</span>
+                        <span class="footer__logo" role="img" aria-label="Claude Buddy infinity logo">♾️</span>
                         <span class="footer__title">Claude Buddy</span>
                     </div>
                     <p class="footer__description">
@@ -677,7 +680,7 @@ npx claude-buddy --project</code></pre>
             
             <div class="footer__bottom">
                 <p class="footer__copyright">
-                    Made with ❤️ for the Claude Code community • Open Source MIT License
+                    Made with <span role="img" aria-label="Love">❤️</span> for the Claude Code community • Open Source MIT License
                 </p>
             </div>
         </div>

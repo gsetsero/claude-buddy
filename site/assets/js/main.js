@@ -777,7 +777,9 @@ if (document.readyState === 'loading') {
     optimizePerformance();
 }
 
-// Service worker registration (for offline functionality)
+// Service worker registration disabled until sw.js is implemented
+// Uncomment below when service worker file is ready
+/*
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -787,3 +789,4 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+*/
