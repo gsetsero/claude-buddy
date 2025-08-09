@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /logo-options.html
+Disallow: /SEO_AUDIT_REPORT.md
+Disallow: /SEO_IMPLEMENTATION_SUMMARY.md
+Disallow: /SEO-OPTIMIZATION.md
+Disallow: /TODO.md
+
+# Crawl-delay for responsible crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://claude-buddy.dev/sitemap.xml
